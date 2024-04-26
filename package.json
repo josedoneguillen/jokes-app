@@ -3,14 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "concurrently \"npm run vue-app\" \"npm run express-server\"",
+    "vue-app": "vue-cli-service serve",
+    "express-server": "cd official_joke_api && npm start",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
+    "concurrently": "^8.2.2",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "primevue": "^3.51.0",
+    "vue": "^3.4.25",
+    "vue-router": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

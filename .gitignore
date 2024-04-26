@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+/official_joke_api/node_modules
 /dist
 
 
