@@ -1,5 +1,14 @@
 import { createApp } from "vue";
-import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App.vue";
+import PrimeVue from "primevue/config";
+import "bootstrap/dist/css/bootstrap.css";
+import "primevue/resources/themes/bootstrap4-light-blue/theme.css";
 
-createApp(App).mount("#app");
+const app = createApp(App);
+
+/*
+ * Use of PrimeVue component library for reusable and documented componets to speed up
+ */
+app.use(PrimeVue);
+
+app.mount("#app");
